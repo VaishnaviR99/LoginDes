@@ -1,0 +1,244 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.maindiv {
+  /* border: 3px solid red; */
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(38, 16, 52),
+    rgb(119, 37, 60),
+    rgb(122, 134, 186)
+  );
+  filter: blur(5px);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  /* font-weight: bold; */
+  border-radius: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 38%;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: rgba(93, 93, 145, 0.25) 0px 50px 100px -20px,
+    rgba(92, 89, 89, 0.3) 0px 30px 60px -30px,
+    rgba(35, 68, 100, 0.35) 0px -2px 6px 0px inset;
+}
+
+.loginForm > i {
+  border: 1px solid rgb(150, 143, 143);
+  padding: 1rem;
+  border-radius: 100rem;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+.dropdown {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+.loginForm {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.loginForm .inputdiv {
+  width: 55%;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: last baseline;
+  /* margin-bottom: 1rem; */
+
+  border-bottom: 2px solid beige;
+}
+.inputdiv:focus-within {
+  border-bottom: 2px solid black;
+  /* border: 1px solid yellow; */
+
+  background-color: rgba(100, 89, 95, 0.3);
+}
+.inputdiv i {
+  color: rgba(250, 249, 249, 0.7);
+}
+.input {
+  padding: 0.5rem;
+  border: none;
+  background-color: transparent;
+  font-size: medium;
+}
+.input::placeholder {
+  font-size: medium;
+}
+.input:focus {
+  outline: none;
+}
+.loginForm p {
+  color: rgb(190, 52, 52);
+  font-size: smaller;
+  text-align: right;
+
+  width: 60%;
+}
+
+.btndiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.btndiv div {
+  color: rgb(112, 109, 109);
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 2rem;
+  /* font-weight: bold; */
+  font-size: medium;
+}
+
+.btndiv a {
+  color: rgb(112, 109, 109);
+  text-decoration: none;
+}
+.loginForm button {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(89, 53, 146),
+    rgb(119, 37, 60),
+    rgb(122, 133, 184)
+  );
+  width: 60%;
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  font-size: large;
+}
+
+#alert-container {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  min-width: 250px;
+  visibility: hidden;
+  /* background-color: #333; */
+  color: #faf5f5;
+  text-align: center;
+
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+
+  font-size: 17px;
+}
+#alert-container.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    top: 30px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    top: 30px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+/* Media query for mobile screens */
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+
+  .loginForm .inputdiv {
+    width: 80%;
+  }
+
+  .loginForm p {
+    width: 80%;
+  }
+
+ /* .btndiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}*/
+
+.btndiv div {
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ gap: 0.5rem;
+  /* font-weight: bold; */
+ 
+} 
+
+
+
+  
+  .loginForm button {
+    width: 100%;
+  }
+
+  #alert-container.show {
+  font-size: small;
+  z-index: 3;
+}
+}

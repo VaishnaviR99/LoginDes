@@ -1,0 +1,212 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* border: 1px solid rgb(17, 17, 16); */
+}
+.dropdown {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1;
+}
+.container {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  /* border: 1px solid rgb(4, 0, 255); */
+  margin: auto;
+  width: 60%;
+  height: 80vh;
+  margin-top: 5%;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.imgdiv {
+  background-image: url("https://i.pinimg.com/originals/45/d4/59/45d4595488d79792342ba0ab12dc071f.png");
+  width: 45%;
+  background-size: cover;
+  margin-left: -0.75rem;
+}
+.loginForm {
+  /* border: 1px solid rgb(217, 255, 0); */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  width: 55%;
+}
+h1 {
+  color: rgb(249, 73, 113, 1);
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.loginForm .inputdiv {
+  width: 60%;
+  /* margin-bottom: 1rem; */
+display: flex;
+  flex-direction: row;
+     /* justify-content: center; */
+  align-items: last baseline;
+  border-bottom: 2px solid beige;
+}
+.inputdiv:focus-within {
+  border-bottom: 2px solid black;
+
+  background-color: rgb(238, 152, 202, 0.2);
+}
+.inputdiv i {
+  color: rgb(249, 73, 113, 0.7);
+}
+.input {
+  padding: 0.5rem;
+  border: none;
+  background-color: transparent;
+  font-size: medium;
+}
+.input::placeholder {
+  font-size: medium;
+}
+.input:focus {
+  outline: none;
+}
+.loginForm p {
+  color: red;
+  font-size: smaller;
+  text-align: right;
+
+  width: 60%;
+}
+
+.rememberme {
+  width: 60%;
+}
+.rememberme label {
+  font-size: small;
+}
+.btndiv {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btndiv button {
+  background-color: rgb(249, 73, 113, 1);
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.btndiv a {
+  color: rgb(249, 73, 113, 1);
+  text-decoration: none;
+}
+
+#alert-container {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  min-width: 250px;
+  visibility: hidden;
+  /* background-color: #333; */
+  color: #faf5f5;
+  text-align: center;
+
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+
+  font-size: 17px;
+}
+#alert-container.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  
+}
+
+@-webkit-keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    top: 30px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    top: 30px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+
+
+/* Media query for mobile screens */
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    width: 80%;
+  }
+
+  .imgdiv {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+
+  .loginForm {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .inputdiv,
+  .loginForm p,
+  .rememberme,
+  .btndiv {
+    width: 80%;
+  }
+.rememberme {
+  margin-bottom: 1rem;
+}
+#alert-container.show {
+  font-size: small;
+  
+}
+  
+}

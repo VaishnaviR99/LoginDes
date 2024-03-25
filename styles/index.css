@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.dropdown {
+  width: 20%;
+  align-self: flex-start;
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+}
+
+h3 {
+  align-self: center;
+  margin: 1rem;
+  margin-top: 1rem;
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d8dde6;
+  width: 40%;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  position: relative;
+  background-color: #ffffff;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+lottie-player {
+  position: relative;
+  align-self: center;
+  border: 1px solid gray;
+  border-radius: 100%;
+}
+.loginForm p {
+  color: red;
+  font-size: smaller;
+  margin-top: -1rem;
+  text-align: right;
+}
+.form-control-sm {
+  border: #dfe3e7 2px solid;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.rememberme {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.forgotlink {
+  align-self: center;
+}
+
+#alert-container {
+  position: absolute;
+  bottom: 20%;
+  right: 0.5rem;
+  width: 30%;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .dropdown {
+    width: auto;
+    position: static; 
+    margin-bottom: 1rem; 
+  }
+
+  .loginForm {
+    width: 80%; 
+    padding: 1rem; 
+  }
+
+  lottie-player {
+    width: 60px; 
+    height: 60px; 
+  }
+
+  #alert-container {
+  position: absolute;
+  top: 10%;
+  right: 0.5rem;
+  width:40%;
+  font-size: small;
+}
+}
