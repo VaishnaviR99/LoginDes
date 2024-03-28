@@ -1,7 +1,7 @@
-body {
+* {
   padding: 0;
   margin: 0;
-  /* min-height: 100vh; */
+  box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -10,7 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 80vh;
-  width: 40%;
+  width: 35%;
   margin: auto;
   margin-top: 5%;
   border-radius: 1rem;
@@ -18,7 +18,7 @@ body {
 }
 
 .inputdiv i {
-  color: rgb(249, 73, 113, 0.7);
+  color: rgba(249, 73, 113,0.7);
   margin-left: 0.5rem;
 }
 .loginForm {
@@ -30,31 +30,29 @@ body {
 }
 
 h1 {
-  color: rgb(249, 73, 113, 1);
+  color: rgba(249, 73, 113, 1);
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
 .loginForm .inputdiv {
-  
   width: 80%;
   display: flex;
   flex-direction: row;
   align-items: center;
   border-bottom: 2px solid beige;
-  margin-bottom: -0.3rem;
+ 
 }
 
 .inputdiv:focus-within {
-  border-bottom: 2px solid rgb(238, 152, 202, 0.5);
-  background-color: rgb(238, 152, 202, 0.2);
+  border-bottom: 2px solid rgba(238, 152, 202, 0.5);
+  background-color: rgba(238, 152, 202, 0.2);
   border-radius: 5px;
 }
 .input {
-   border: 1px solid yellowgreen;
+  border: 1px solid yellowgreen;
   border: none;
   width: 100%;
   padding: 0.7rem;
-  /* margin: 0.5rem; */
   background-color: transparent;
   font-size: medium;
 }
@@ -65,9 +63,9 @@ h1 {
 .rememberme {
   width: 80%;
   margin-bottom: 0.5rem;
+  margin-top: 1rem;
   display: flex;
   gap: 5px;
-  
 }
 
 .rememberme label {
@@ -82,7 +80,7 @@ h1 {
 }
 
 .btndiv button {
-  background-color: rgb(249, 73, 113, 1);
+  background-color: rgba(249, 73, 113, 1);
   position: relative;
   display: flex;
   color: white;
@@ -92,47 +90,40 @@ h1 {
   font-weight: bold;
   font-size: medium;
   cursor: pointer;
-  transition: background-color 0.1s ease-in-out ;
+  transition: background-color 0.1s ease-in-out;
 }
-.btndiv .fa-solid{
-  
+.btndiv .fa-solid {
   position: absolute;
   right: 20%;
 }
 .btndiv button:hover {
   background-color: rgb(231, 49, 92);
-  
 }
 
 .btndiv a {
-  color: rgb(249, 73, 113, 1);
+  color: rgba(249, 73, 113, 1);
   text-decoration: none;
- 
 }
 .btndiv a:hover {
-  color: rgb(249, 73, 113, 1);
+  color: rgba(249, 73, 113, 1);
   text-decoration: underline;
-  
 }
-
 
 .loginForm p {
   color: red;
   font-size: smaller;
   text-align: right;
-
+  margin-bottom: 0.5rem;
   width: 80%;
 }
 
-
 #alert-container {
-  /* position: absolute; */
-   top: 2rem;
+  top: 2rem;
   right: 1rem;
   min-width: 200px;
   visibility: hidden;
   color: #faf5f5;
-  text-align: left;
+  text-align: center;
   padding: 16px;
   position: fixed;
   z-index: 1;
@@ -142,7 +133,6 @@ h1 {
   visibility: visible;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  
 }
 
 @-webkit-keyframes fadein {
@@ -188,7 +178,6 @@ h1 {
     opacity: 0;
   }
 }
-
 
 /* Media query for mobile screens */
 
@@ -220,67 +209,20 @@ h1 {
   }
   .rememberme {
     margin-bottom: 1rem;
-   
   }
- 
-#alert-container {
-  position: absolute;
-  top: 2rem;
-  right: 23%;
-  
-}
- 
+
+  #alert-container {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+
   #alert-container.show {
     font-size: small;
     visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
   }
-
-@keyframes fadein {
-  from {
-    right: 0;
-    opacity: 0;
-  }
-  to {
-    right: 23%;
-    opacity: 1;
-  }
-}
-
-
-
-@keyframes fadeout {
-  from {
-    right: 23%;
-    opacity: 1;
-  }
-  to {
-    right: 0;
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes fadeout {
-  from {
-    right: 23%;
-    opacity: 1;
-  }
-  to {
-    right: 0;
-    opacity: 0;
-  }
-}
-@-webkit-keyframes fadein {
-  from {
-    right: 23%;
-    opacity: 1;
-  }
-  to {
-    right: 0;
-    opacity: 0;
-  }
-}
-
-
 }

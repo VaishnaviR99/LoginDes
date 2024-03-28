@@ -4,79 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="./Login.css">
-
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Task List</title>
 </head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .list_container {
+        background-color: rgb(226, 196, 196);
+        height: 100vh;
+        position: relative;
+        padding: 1rem;
+    }
+
+    .list_container div {
+        width: 80%;
+        height:100px;
+        text-align: center;
+        font-size: larger;
+        font-weight:bolder ;
+        cursor: pointer;
+        padding-top: 1rem;
+        margin-top: 1rem;
+        border-bottom-left-radius: 5rem;
+        border-top-right-radius: 5rem;
+        box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    }
+    .list_container div:hover{
+        width: 82%;
+        height: 110px;
+        z-index: 2;
+       transition:width 0.5s, height 0.5s ease-in-out ;
+    }
+
+    .list_item1 {
+        position: relative;
+        margin-top: 1rem;
+        background-color: yellow;
+
+
+    }
+
+    .list_item2 {
+        position: absolute;
+        top: 5rem;
+
+        background-color: rgb(0, 255, 234);
+
+    }
+
+    .list_item3 {
+        position: absolute;
+        top: 8rem;
+        background-color: rgb(255, 0, 242);
+    }
+</style>
 
 <body>
+    <area class="list_container">
 
-<div id="alert-container"></div>
-
-    <div class="container">
-
-
-
-        <form class="loginForm" id="login_form" action="https://dev.soloboss.net/vpbx_login.php" method="post">
-
-            <h1>LOGIN</h1>
-
-            <div class="inputdiv" id="userinputdiv">
-
-                <i class="fa-regular fa-user"></i>
-                <input type="text" placeholder="Username" class="input" id="username" value=""
-                    placeholder="enter username here" name="username" required />
-
-            </div>
-            <p class="usernamehelper">
-
-            </p>
-
-            <div class="inputdiv" id="passinputdiv">
-
-                <i class="fa-regular fa-eye"></i>
-                <input type="password" placeholder="Password" class="input" id="password" value=""
-                    placeholder="Enter password here" name="password" required />
-
-            </div>
-            <p class="passhelper">
-
-            </p>
-
-            <div class="inputdiv" id="accinputdiv">
-
-                <i class="fa-regular fa-address-book"></i>
-                <input type="text" placeholder="Account Name" class="input" id="accountName" value=""
-                    placeholder="Enter account nmae here" name="account_name" required />
-
-            </div>
-            <p class="accounthelper">
-
-            </p>
-
-            <div class="rememberme">
-                <input type="checkbox" id="checkbox" name="remember_me"  />
-                <label for="checkbox">Remember me</label>
-            </div>
-
-            <div class="btndiv">
-                <a href="#">Forgot account?</a>
-                <button type="submit">  Login <i class="fa-solid fa-spinner fa-spin-pulse"></i></button>
-            </div>
-
-
-
-        </form>
-        
-
+        <div class="list_item1"> <a href="./Login_1//Login.html">Login - 1</a></div>
+        <div class="list_item2"> TASK - 1</div>
+        <div class="list_item3"></div>
+      
     </div>
-
 </body>
-<script src="./Login.js"></script>
+<script>
+
+</script>
 
 </html>
